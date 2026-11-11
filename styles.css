@@ -45,6 +45,15 @@ body {
   border-right: 2px solid var(--black);
 }
 
+.top-banner {
+  margin: 0 0 18px;
+  padding: 10px 12px;
+  background: var(--orange);
+  color: var(--white);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
 .header {
   margin-bottom: 24px;
 }
