@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insurance Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="calculator" aria-labelledby="title">
+        <header class="header">
+          <p class="eyebrow">Premium estimate</p>
+          <h1 id="title">Insurance calculator</h1>
+        </header>
+
+        <div class="form-grid">
+          <div class="field-group">
+            <label for="age">Age</label>
+            <input
+              id="age"
+              name="age"
+              type="number"
+              min="18"
+              step="1"
+              inputmode="numeric"
+              placeholder="Enter age"
+            />
+          </div>
+
+          <div class="field-group">
+            <label for="power">Engine power (kW)</label>
+            <input
+              id="power"
+              name="power"
+              type="number"
+              min="1"
+              step="1"
+              inputmode="numeric"
+              placeholder="Enter kW"
+            />
+          </div>
+
+          <div class="field-group">
+            <label for="experience">Driving experience (years)</label>
+            <input
+              id="experience"
+              name="experience"
+              type="number"
+              min="0"
+              step="1"
+              inputmode="numeric"
+              placeholder="Enter years"
+            />
+          </div>
+
+          <div class="field-group">
+            <label for="car-price">New car price (€)</label>
+            <input
+              id="car-price"
+              name="car-price"
+              type="number"
+              min="0"
+              step="100"
+              inputmode="decimal"
+              placeholder="Enter price"
+            />
+          </div>
+
+          <div class="field-group coverage-group">
+            <label for="coverage">Coverage</label>
+            <select id="coverage" name="coverage">
+              <option value="">Select coverage</option>
+              <option value="third-party">Only third party</option>
+              <option value="third-party-fire-theft">Third party + fire and theft</option>
+              <option value="comprehensive">Fully comprehensive</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <aside class="result-panel" aria-live="polite">
+        <p class="result-label">Estimated annual premium</p>
+        <p id="result-value" class="result-value">€0</p>
+        <p id="result-status" class="result-status">Enter your details to calculate</p>
+      </aside>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
